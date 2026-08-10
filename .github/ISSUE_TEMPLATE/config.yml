@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Verity JE itself
+    url: https://modrinth.com/mod/verity-je-official
+    about: Bugs in the base Verity JE mod belong to its author, not to this addon.
+  - name: Download Verity JE Extra
+    url: https://modrinth.com/mod/verity-je-extra
+    about: This repository is not a download location. Get the mod from Modrinth.

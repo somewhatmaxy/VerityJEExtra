@@ -1,0 +1,96 @@
+name: Bug report
+description: Something in Verity JE Extra is broken or behaving unexpectedly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before you post, please remove your API keys from anything you paste. Keys live in
+        `config/verityjeextra.json`, and logs can contain endpoint URLs. Replace them with `REDACTED`.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I checked the existing issues and this is not already reported
+          required: true
+        - label: The problem still happens with other mods removed, or I have listed the mods involved below
+          required: false
+        - label: The problem goes away when Verity JE Extra is removed
+          required: false
+
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Which part is affected?
+      options:
+        - Chat override
+        - Cloud Voice override
+        - Offline Voice override
+        - The config tab itself
+        - The mod does not load at all
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: extra-version
+    attributes:
+      label: Verity JE Extra version
+      placeholder: "1.0.0-beta.2"
+    validations:
+      required: true
+
+  - type: input
+    id: verity-version
+    attributes:
+      label: Verity JE version
+      placeholder: "6"
+    validations:
+      required: true
+
+  - type: input
+    id: forge-version
+    attributes:
+      label: Forge version
+      placeholder: "1.20.1-47.4.20"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what actually happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Verity's config screen
+        2. Go to the Verity JE Extra tab
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: settings
+    attributes:
+      label: Relevant settings
+      description: >
+        Which overrides were on, and which provider or endpoint you pointed at.
+        Do not include your API key.
+      placeholder: "Cloud Voice override on, fish.audio format on, endpoint https://api.fish.audio/v1/tts"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log
+      description: >
+        `logs/latest.log` from your instance, or the crash report if the game crashed.
+        Attach the file or paste the relevant part. Remember to redact keys.
+      render: text

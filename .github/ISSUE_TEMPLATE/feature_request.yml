@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest something Verity JE Extra should be able to do
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The thing you cannot currently do, or the setting you wish existed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What should it look like?
+      description: How you picture it working in the config tab.
+    validations:
+      required: true
+
+  - type: input
+    id: provider
+    attributes:
+      label: Provider or service involved
+      description: If this is about a specific chat or TTS provider, name it and link its API docs.
+      placeholder: "fish.audio, https://docs.fish.audio"
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Anything you already tried
+      description: Workarounds, other settings, other mods.
